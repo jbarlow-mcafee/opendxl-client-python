@@ -1,0 +1,117 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ePO Broker List Export &#8212; OpenDXL Python SDK 4.1.0.187 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">OpenDXL Python SDK 4.1.0.187 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="epo-broker-list-export">
+<h1>ePO Broker List Export<a class="headerlink" href="#epo-broker-list-export" title="Permalink to this headline">¶</a></h1>
+<p>DXL clients need to have a list of Brokers on the fabric to connect to.</p>
+<p>The following steps walk through the process to export the list of all DXL brokers on the fabric for use by DXL clients:</p>
+<ol class="arabic">
+<li><p class="first">Navigate to <strong>Server Settings</strong> and select the <strong>DXL Certificates (Third Party)</strong> setting on the left navigation bar.</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If using an older version of the DXL ePO Extensions, the <strong>Server Settings</strong> in the ePO console may have only a
+single option for all DXL certificates (titled &quot;<strong>DXL Certificates</strong>&quot;). Click that setting, and proceed with the
+rest of the steps in this guide as normal.</p>
+</div>
+<img alt="_images/serversettings-certs.png" src="_images/serversettings-certs.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click the <strong>Edit</strong> button in the lower right corner (as shown in the image above)</p>
+<blockquote>
+<div><img alt="_images/editdxlcerts-save.png" src="_images/editdxlcerts-save.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click the <strong>Export All</strong> button in the <strong>Broker List</strong> section (as shown in the image above)</p>
+</li>
+<li><p class="first">The exported file, <code class="docutils literal notranslate"><span class="pre">brokerlist.properties</span></code>, will be saved locally.</p>
+<p>The contents of this file can be copied into the <code class="docutils literal notranslate"><span class="pre">[Brokers]</span></code> section of a configuration file used to
+instantiate a <a class="reference internal" href="dxlclient.client_config.html#dxlclient.client_config.DxlClientConfig" title="dxlclient.client_config.DxlClientConfig"><code class="xref py py-class docutils literal notranslate"><span class="pre">dxlclient.client_config.DxlClientConfig</span></code></a> instance.</p>
+<p>See the <a class="reference internal" href="dxlclient.client_config.html#dxlclient.client_config.DxlClientConfig.create_dxl_config_from_file" title="dxlclient.client_config.DxlClientConfig.create_dxl_config_from_file"><code class="xref py py-func docutils literal notranslate"><span class="pre">dxlclient.client_config.DxlClientConfig.create_dxl_config_from_file()</span></code></a> method for more information.</p>
+</li>
+</ol>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/epobrokerlistexport.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">OpenDXL Python SDK 4.1.0.187 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, McAfee LLC.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.1.
+    </div>
+  </body>
+</html>
